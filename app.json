@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "e921c3ef-d2c2-4c54-b8a7-3e0960da6649"
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.kamrens23.budgetly",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    }
+  }
+}

@@ -3,16 +3,21 @@ const express = require("express");
 const app = express();
 const port = 5000;
 const prisma = new PrismaClient();
+const cors = require("cors");
+
+app.use(cors());
 
 //Makes sure that when data is sent back (in the form of JSON) that Express can read it
 app.use(express.json());
 // This is what you need to run the server and make the backend accessible
-app.listen(5000, () => {
+app.listen(5000,"0.0.0.0", () => {
   console.log("Port is listening.");
 });
 
 //This is where id get the data from expense table
 app.get("/prisma/expense", async (req, res) => {
+  console.log('Received request to fetch expenses') // Tests if the backend is receiving requests
+
   try {
     const expenses = await prisma.expense.findMany(); // Fetches all the records from the expense table (await because it takes time)
     res.json(expenses); //Sends the data to the front end

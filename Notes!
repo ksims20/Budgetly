@@ -1,0 +1,56 @@
+React Native
+To start the app: 
+npx expo start for the frontend
+npx nodemon backend/api.js for the backend
+
+GitHub
+Git add .
+Git commit -m “message”
+Git push -u origin main
+
+Mysql 
+To check if MySql is running: mysql -u root -p
+
+Node.JS
+Req.body – Gets data from the front end, whatever the user enters from the front end
+Res.json(data) – Sends data back to the Front end
+Await – Used as async operation (it takes time to get data from the database)
+
+PRISMA
+Initialize: npx prisma init
+
+1.	Change the database provider
+2.	Update your .env file
+3.	Define your first table
+Migrate: prisma migrate dev –name init  (creates the migration folder)
+Generate Client: npx prisma generate
+
+
+After making changes to the file, apply changes using.
+
+npx prisma migrate dev --name add-transaction-type
+
+Express
+Makes sure that when data is sent back (in the form of JSON) that Express can read it
+app.use(express.json());
+
+Extras
+What does your app do?
+Your app is a budget tracker, so it needs to store data related to:
+•	Income (money coming in)
+•	Expenses (money going out)
+What kind of information do you need to track?
+For each transaction, you’d probably want to know:
+•	What the transaction is (e.g., rent, groceries, salary)
+•	How much money is involved
+•	When the transaction happened
+•	Whether it’s income or an expense
+•	What category it falls under (food, bills, savings, etc.)
+What would this look like in a database?
+•	Each transaction needs a unique ID
+•	A description of the transaction
+•	An amount (money involved)
+•	A date when it happened
+•	A type (expense or income)
+
+Main Color of app: #5e17eb
