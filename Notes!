@@ -1,17 +1,17 @@
-React Native
+REACT NATIVE
 To start the app: 
 npx expo start for the frontend
 npx nodemon backend/api.js for the backend
 
-GitHub
+GITHUB
 Git add .
 Git commit -m “message”
 Git push -u origin main
 
-Mysql 
+MYSQL
 To check if MySql is running: mysql -u root -p
 
-Node.JS
+NODE.JS
 Req.body – Gets data from the front end, whatever the user enters from the front end
 Res.json(data) – Sends data back to the Front end
 Await – Used as async operation (it takes time to get data from the database)
@@ -30,11 +30,11 @@ After making changes to the file, apply changes using.
 
 npx prisma migrate dev --name add-transaction-type
 
-Express
+EXPRESS
 Makes sure that when data is sent back (in the form of JSON) that Express can read it
 app.use(express.json());
 
-Extras
+EXTRAS
 What does your app do?
 Your app is a budget tracker, so it needs to store data related to:
 •	Income (money coming in)
@@ -53,4 +53,43 @@ What would this look like in a database?
 •	A date when it happened
 •	A type (expense or income)
 
-Main Color of app: #5e17eb
+Main Color of app: #5e17eb or #9966CC
+
+
+EMULATOR:
+
+-Since I didnt run this on an mac machine, I used an android emulator, I could have just used Expo on my Iphone but it was easier this way
+-I installed Android Stdudio
+-Created a virtual device
+-Choose a system image
+-From there I could do npm run android (just like you can do npm run ios on Mac)
+-Then npx expo start --android
+
+
+
+CSS STYLING
+
+- View is like <div>
+- Text is like <p>
+- Button has properties such as title, and onPress
+- TextInput allows the user to type : Has a style, a placeholder, a value, onChangeText, and then you can use secureTextEntry to hide text
+- TouchableOpacity, wrapper that make it respod to touch gesture
+- StyleSheet defines styles like CSS
+- Each page has it's on styling sheet, if you want to use the same styling you can create a new file
+- Ex: styles.js, and then in those files import sharedStyles from './styles'; .... <TextInput style={sharedStyles.blahblahblah}>
+
+
+STATE MANAGEMENT
+-useState keeps track of values that can change over time
+
+ANIMATABLE (Ended up not using)
+-npx expo install react-native-animatable
+-https://github.com/oblador/react-native-animatable
+
+LINEARGRADIENT
+-Installed using npx expo install expo-linear-gradient
+-When using <LinearGraident> tags you dont need <View>
+
+FONTAWESOME
+-Already embedded in Expo no install needed
+-If you what to put an icon in a textbox youll have to wrap it in a <view>, otherwise just create it inside <view> or <LinearGradient>
