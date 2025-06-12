@@ -41,7 +41,7 @@ export default function App() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch("http://192.168.1.156:5000/prisma/expense")  // If router changes , get the new ip [ipconfig | findstr /i "IPv4" in powershell]
+    fetch("http://192.168.1.156:8080/api/expense")  // If router changes , get the new ip [ipconfig | findstr /i "IPv4" in powershell]
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error("Error fetching API:", error));
@@ -59,3 +59,5 @@ export default function App() {
 //     justifyContent: "center",
 //   },
 // });
+
+

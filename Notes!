@@ -11,24 +11,59 @@ Git push -u origin main
 MYSQL
 To check if MySql is running: mysql -u root -p
 
-NODE.JS
+DB NAME:budgetly_db
+DB USERNAME: root
+DB PASSWORD: k7774363
+
+<!-- NODE.JS
 Req.body – Gets data from the front end, whatever the user enters from the front end
 Res.json(data) – Sends data back to the Front end
-Await – Used as async operation (it takes time to get data from the database)
+Await – Used as async operation (it takes time to get data from the database) -->
 
-PRISMA
+<!-- PRISMA
 Initialize: npx prisma init
 
 1.	Change the database provider
 2.	Update your .env file
 3.	Define your first table
 Migrate: prisma migrate dev –name init  (creates the migration folder)
-Generate Client: npx prisma generate
+Generate Client: npx prisma generate -->
 
 
-After making changes to the file, apply changes using.
+<!-- After making changes to the file, apply changes using.
 
-npx prisma migrate dev --name add-transaction-type
+npx prisma migrate dev --name add-transaction-type -->
+
+
+SWAPPED TO SPRINGBOOT FOR THE BACKEND:
+
+Backend rewritten in Java with Spring Boot (v3.5.0) using Maven Daemon (mvnd).
+
+https://start.spring.io/ :
+
+Project: Mavern
+Language: Java
+Spring Boot: 3.5.0
+
+Project Metadata:
+
+Group: com.budgetly
+Artifact: backend
+Name: backend
+Package: com.budgetly.backend
+
+
+
+MAVEN: 
+
+Maven Daemon was installed to Environmental Variables instead of Maven, used mvnd instead of mvd.
+Run it in the SpringBoot folder: mvnd spring-boot:run
+
+
+POSTMAN: 
+
+Used for testing HTTP request
+
 
 EXPRESS
 Makes sure that when data is sent back (in the form of JSON) that Express can read it
@@ -93,3 +128,43 @@ LINEARGRADIENT
 FONTAWESOME
 -Already embedded in Expo no install needed
 -If you what to put an icon in a textbox youll have to wrap it in a <view>, otherwise just create it inside <view> or <LinearGradient>
+
+
+
+
+
+
+
+
+
+
+
+Work on your Dashboard screen
+
+Build UI components in React Native to fetch and display data from your Spring Boot backend
+
+Implement add/update/delete operations if needed
+
+Use libraries you like for styling and animations (Animatable, LinearGradient, FontAwesome, etc.)
+
+
+
+Azure & Terraform setup
+
+Once your backend and frontend are communicating well locally, start planning deployment
+
+Use Azure to host your backend (e.g., Azure App Service, Azure Database for MySQL)
+
+Use Terraform to automate provisioning and infrastructure management on Azure
+
+This step might be more involved, so you can do it once your app is stable locally
+
+
+
+Add testing
+
+Start with backend tests using JUnit (popular for Java/Spring Boot)
+
+Then move to frontend testing with Jest or React Native Testing Library
+
+Add integration or end-to-end tests as your app matures
