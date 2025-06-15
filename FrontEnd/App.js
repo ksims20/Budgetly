@@ -7,6 +7,7 @@ No styling or return statement needed
 import Login from "./Login.js";
 import Register from "./Register.js";
 import Dashboard from "./Dashboard.js";
+import Testing from "./Testing.js";
 
 
 import { StatusBar } from "expo-status-bar";
@@ -32,6 +33,7 @@ function Nav(){
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Register" component={Register} />
         <Stack.Screen name="Dashboard" component={Dashboard} />
+        <Stack.Screen name="Testing" component={Testing} />
       </Stack.Navigator>
     </NavigationContainer>
   )
@@ -41,7 +43,7 @@ export default function App() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch("http://192.168.1.156:8080/api/expense")  // If router changes , get the new ip [ipconfig | findstr /i "IPv4" in powershell]
+    fetch("http://192.168.1.156:8080/api/expenses")  // If router changes , get the new ip [ipconfig | findstr /i "IPv4" in powershell]
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error("Error fetching API:", error));

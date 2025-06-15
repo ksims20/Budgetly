@@ -80,8 +80,14 @@ const Login = ({ navigation }) => {
         <Text style={styles.link} onPress={() => navigation.navigate('Register')}>
           Register here
         </Text>
+        <Text style={styles.link} onPress={() => navigation.navigate('Testing')}>
+          TestBackEndToFrontEnd
+        </Text>
       </Text>
       </LinearGradient>
+
+      
+      
     // </View>
   );
 };

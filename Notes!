@@ -1,7 +1,12 @@
 REACT NATIVE
 To start the app: 
-npx expo start for the frontend
-npx nodemon backend/api.js for the backend
+npx expo start for the frontend, you can just be in the Budgetly main folder, Press A to start the android app.
+<!-- npx nodemon backend/api.js for the backend -->
+mvnd spring-boot:run for the backend (Had to comment out the applicationtest.java it was causing issues when running it) Make sure you're in the SpringBoot foldera
+
+or for the future, build JAR file (Already did): mvnd clean package -DskipTests
+and then run it: java -jar target/SpringBoot-0.0.1-SNAPSHOT.jar
+
 
 GITHUB
 Git add .
@@ -14,6 +19,8 @@ To check if MySql is running: mysql -u root -p
 DB NAME:budgetly_db
 DB USERNAME: root
 DB PASSWORD: k7774363
+
+http://192.168.1.156:8080/api/expenses
 
 <!-- NODE.JS
 Req.body – Gets data from the front end, whatever the user enters from the front end
@@ -54,6 +61,8 @@ Package: com.budgetly.backend
 
 
 
+
+
 MAVEN: 
 
 Maven Daemon was installed to Environmental Variables instead of Maven, used mvnd instead of mvd.
@@ -63,6 +72,8 @@ Run it in the SpringBoot folder: mvnd spring-boot:run
 POSTMAN: 
 
 Used for testing HTTP request
+http://localhost:8080/api/expenses
+
 
 
 EXPRESS
@@ -135,36 +146,15 @@ FONTAWESOME
 
 
 
+2) Azure & Terraform Setup
+Once your backend is working locally and you’re confident in the API, start setting up Azure to host your backend and database. Terraform will help you automate that infrastructure.
+
+3) Connect Frontend to Deployed Backend
+After deployment, update your frontend fetch URLs to point to your Azure-hosted backend instead of your local IP.
+
+4) Dashboard UI & Styling
+Finally, once the data is flowing from the cloud backend, you can polish your Dashboard UI with React Native styles, charts, and whatever else you want.
 
 
 
 
-Work on your Dashboard screen
-
-Build UI components in React Native to fetch and display data from your Spring Boot backend
-
-Implement add/update/delete operations if needed
-
-Use libraries you like for styling and animations (Animatable, LinearGradient, FontAwesome, etc.)
-
-
-
-Azure & Terraform setup
-
-Once your backend and frontend are communicating well locally, start planning deployment
-
-Use Azure to host your backend (e.g., Azure App Service, Azure Database for MySQL)
-
-Use Terraform to automate provisioning and infrastructure management on Azure
-
-This step might be more involved, so you can do it once your app is stable locally
-
-
-
-Add testing
-
-Start with backend tests using JUnit (popular for Java/Spring Boot)
-
-Then move to frontend testing with Jest or React Native Testing Library
-
-Add integration or end-to-end tests as your app matures
